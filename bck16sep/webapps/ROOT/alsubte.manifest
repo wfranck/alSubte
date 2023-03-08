@@ -1,0 +1,38 @@
+CACHE MANIFEST
+# 2014-02-03 v1.0.002
+CACHE:
+index.html
+javascripts/modernizr.custom.js
+stylesheets/component.css
+https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+javascripts/boxlayout.js
+javascripts/fullscreen.js
+javascripts/cambiahoras.js
+stylesheets/online.css
+map.svg
+images/logo.png
+images/zoomout.png
+images/zoomin.png
+images/zoomeq.png
+images/wifi.png
+images/up.png
+images/termconsulta.png
+images/plus.png
+images/next.png
+images/low_contrast_linen.png
+images/logo250.png
+images/fullup.png
+images/escalera.png
+images/down.png
+images/con.png
+images/before.png
+images/banios.png
+images/ascensor.png
+
+NETWORK
+#login.asp
+listinfosubte.xml
+
+FALLBACK
+#HTML/ /offline.html
+stylesheets/online.css stylesheets/offline.css

@@ -1,0 +1,20 @@
+CACHE MANIFEST
+# 2014-02-03 v1.0.001
+CACHE:
+index.html
+javascripts/modernizr.custom.js
+stylesheets/component.css
+images/logo.png
+https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js
+javascripts/boxlayout.js
+javascripts/fullscreen.js
+javascripts/cambiahoras.js
+stylesheets/online.css
+
+NETWORK
+#login.asp
+listinfosubte.xml
+
+FALLBACK
+#HTML/ /offline.html
+stylesheets/online.css stylesheets/offline.css

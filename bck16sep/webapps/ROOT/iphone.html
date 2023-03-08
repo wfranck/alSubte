@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es" manifest="alsubte.manifest">
+	<head>
+		<!-- <meta http-equiv="refresh" content="300"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+		<title>alSubte</title>
+		<meta name="description" content="Estado del Subte de la Ciudad de Buenos Aires" />
+		<meta name="keywords" content="estado del subte, buenos aires" />
+		<meta name="author" content="Walter Javier Franck" />
+		<link rel="shortcut icon" sizes="196x196" href="images/logo.png"> 
+		<link rel="icon" type="image/png" href="images/logo.png" />
+		<link rel="apple-touch-startup-image" href="images/logo.png">
+		<link rel="apple-touch-icon" href="images/logo.png">
+		<link rel="apple-touch-precomposed" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
+	    <script src="javascripts/modernizr.custom.js"></script>
+	    
+	</head>
+	<body onload="cambiaHoras()">
+		<div id="fullscreen" class="container">
+		<div id="fullscreenButton" class="fullscreen">
+			<div id="horaactualizacion" class="horaactualizacion"></b></div>
+		</div>
+			<div id="bl-main" class="bl-main">
+				<section>
+					<div class="bl-box">
+						<div id="estadoTotalImg" class="status"></div>
+						<linea id="estadoTotalLeyenda" class="bl-box estadoTotalLeyenda"></linea>
+						<div class="logo">al<bb>Subte</bb></div>
+					</div>
+					<div class="bl-content">
+						<h2>Acerca de <nada class="logo2">al<bb>Subte</bb></nada></h2>
+						<div class="article">
+							<p>La página la hice en vacaciones para escribir algo de código.</p>
+							<p>Aún está en desarrollo y tengo mil cosas pendientes que de a poco voy a integrar. (tu opinión es bienvenida)</p>
+							<p>
+								<a href="http://www.twitter.com/wfranck"><strong>@wfranck</strong></a>
+							</p>
+						</div>
+					</div>
+					<span class="bl-icon bl-icon-close"></span>
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaA" class="frecuencia"></div>
+						<h1 id="boxLineaA" class="bl-icon">
+							<linea id="letraLineaA" class="bl-box">A</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">26'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenASale" class="promedionum"></div>
+							<div class="promediodesc">último Tren<br>a San Pedrito</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenAEntra" class="ultimotrennum">22:56</div>
+							<div class="ultimotrendesc">último Tren<br>a Plaza de Mayo</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								A								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoA" class="estado">Servicio Normal</div>
+							<div id="descA" class="descestado"></div>
+						</div>						
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaB" class="frecuencia"></div>
+						<h1 id="boxLineaB" class="bl-icon ">
+							<linea id="letraLineaB" class="bl-box">B</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">27'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenBSale" class="promedionum">22:21</div>
+							<div class="promediodesc">último Tren<br>a J.M. de Rosas</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenBEntra" class="ultimotrennum">22:49</div>
+							<div class="ultimotrendesc">último Tren<br>a L.N. Alem</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								B								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoB" class="estado">Servicio Normal</div>
+							<div id="descB" class="descestado"></div>
+						</div>					
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaC" class="frecuencia"></div>
+						<h1 id="boxLineaC" class="bl-icon">
+							<linea id="letraLineaC" class="bl-box">C</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">13'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenCSale" class="promedionum">22:45</div>
+							<div class="promediodesc">último Tren<br>a Constitución</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenCEntra" class="ultimotrennum">22:47</div>
+							<div class="ultimotrendesc">último Tren<br>a Retiro</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								C								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoC" class="estado">Servicio Normal</div>
+							<div id="descC" class="descestado"></div>
+						</div>			
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaD" class="frecuencia"></div>
+						<h1 id="boxLineaD" class="bl-icon"><!-- messagebr"> -->
+							<linea id="letraLineaD" class="bl-box">D</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">26'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenDSale" class="promedionum">22:24</div>
+							<div class="promediodesc">último Tren<br>a C. de Tucumán</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenDEntra" class="ultimotrennum">22:51</div>
+							<div class="ultimotrendesc">último Tren<br>a Catedral</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								D								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoD" class="estado">Servicio Normal</div>
+							<div id="descD" class="descestado"></div>
+						</div>				
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaE" class="frecuencia"></div>
+						<h1 id="boxLineaE" class="bl-icon">
+							<linea id="letraLineaE" class="bl-box">E</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">24'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenESale" class="promedionum">22:27</div>
+							<div class="promediodesc">último Tren<br>a Pza. de los Virreyes</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenEEntra" class="ultimotrennum">22:59</div>
+							<div class="ultimotrendesc">último Tren<br>a Bolivar</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								E								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoE" class="estado">Servicio Normal</div>
+							<div id="descE" class="descestado"></div>
+						</div>				
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaH" class="frecuencia frecuenciah"></div>
+						<h1 id="boxLineaH" class="bl-icon bl-icon-h">
+							<linea id="letraLineaH" class="bl-box">H</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">13'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenHSale" class="promedionum">23:06</div>
+							<div class="promediodesc">último Tren<br>a Hospitales</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenHEntra" class="ultimotrennum">23:02</div>
+							<div class="ultimotrendesc">último Tren<br>a Corrientes</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								H								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoH" class="estado">Servicio Normal</div>
+							<div id="descH" class="descestado"></div>
+						</div>				
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>				
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaP" class="frecuencia"></div>
+						<h1 id="boxLineaP" class="bl-icon">
+							<linea id="letraLineaP" class="bl-box">P</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">27'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenPPSale" class="promedionum">20:56</div>
+							<div class="promediodesc">último Tren<br>a Int. Saguier</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenPPEntra" class="ultimotrennum">21:23</div>
+							<div class="ultimotrendesc">último Tren<br>a Gral. Savio</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								P								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoP" class="estado">Servicio Normal</div>
+							<div id="descP" class="descestado"></div>
+						</div>
+												
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				
+				
+				<!-- Panel items for the works -->
+				
+				
+				
+				<div class="bl-panel-items" id="bl-panel-work-items">
+					<nav>
+						<span class="bl-icon bl-icon-close derecha"></span>
+					</nav>
+				</div>
+			</div>
+		</div><!-- /container -->
+		<script src="javascripts/cambiahoras.js"></script>
+		<script src="javascripts/jquery.min.js"></script>
+		<script src="javascripts/boxlayout.js"></script>
+		<script src="javascripts/fullscreen.js"></script>
+		<!-- soporte para gestos
+		<script src="js/hammer.js"></script>
+		<script src="js/implhammer.js"></script> -->
+		<script>
+			$(function() {
+				Boxlayout.init();
+			});
+		</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-48044828-1', 'alsubte.com.ar');
+		  ga('send', 'pageview');
+
+		</script>
+
+	</body>
+</html>

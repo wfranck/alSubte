@@ -1,0 +1,9 @@
+<Reporte><Linea><nombre>Línea A</nombre><estado>Servicio Normalizado
+		</estado><frecuencia>300</frecuencia></Linea><Linea><nombre>Línea B</nombre><estado>
+		</estado><frecuencia>314</frecuencia></Linea><Linea><nombre>Línea C</nombre><estado>Demora por inconvenientes climáticos.
+		</estado><frecuencia>296</frecuencia></Linea><Linea><nombre>Línea D</nombre><estado>
+		</estado><frecuencia>300</frecuencia></Linea><Linea><nombre>Línea E</nombre><estado>Servicio Interrumpido a la espera de ambulancia por pasajero.
+		</estado><frecuencia>540</frecuencia></Linea><Linea><nombre>Línea H</nombre><estado>
+		</estado><frecuencia>396</frecuencia></Linea><Linea><nombre>Línea P</nombre><estado>Servicio limitado entre las estaciones estaciones Domingo Pereyra e Infanta Josefa.
+		</estado><frecuencia>435</frecuencia></Linea><Linea><nombre>Línea U</nombre><estado>
+		</estado><frecuencia>1320</frecuencia></Linea><FechaActualizacion><![CDATA[10/02/2014 01:43:35 p.m.]]></FechaActualizacion></Reporte>

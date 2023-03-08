@@ -1,0 +1,1831 @@
+<!DOCTYPE html>
+<html lang="es" manifest="alsubte.manifest">
+	<head>
+		<!-- <meta http-equiv="refresh" content="300"> -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+		<title>alSubte</title>
+		<meta name="description" content="Estado del Subte de la Ciudad de Buenos Aires" />
+		<meta name="keywords" content="estado del subte, buenos aires" />
+		<meta name="author" content="Walter Javier Franck" />
+		<link rel="shortcut icon" sizes="196x196" href="images/logo.png"> 
+		<link rel="icon" type="image/png" href="images/logo.png" />
+		<link rel="apple-touch-startup-image" href="images/logo.png">
+		<link rel="apple-touch-icon" href="images/logo.png">
+		<link rel="apple-touch-precomposed" href="images/logo.png">
+		<link rel="stylesheet" type="text/css" href="stylesheets/component.css" />
+	    <script src="javascripts/modernizr.custom.js"></script>
+	    
+	</head>
+	<body onload="cambiaHoras()">
+		<div id="fullscreen" class="container">
+		<div id="fullscreenButton" class="fullscreen">
+			<div id="horaactualizacion" class="horaactualizacion"></b></div>
+		</div>
+			<div id="bl-main" class="bl-main">
+				<section>
+					<div class="bl-box">
+						<div id="estadoTotalImg" class="status"></div>
+						<linea id="estadoTotalLeyenda" class="bl-box estadoTotalLeyenda">Vamos Argentina!</linea>
+						<div class="logo">al<bb>Subte</bb></div>
+					</div>
+					<div class="bl-content">
+						<h2>Acerca de <nada class="logo2">al<bb>Subte</bb></nada></h2>
+						<div class="article">
+							<p>La página la hice en vacaciones para escribir algo de código.</p>
+							<p>Aún está en desarrollo y tengo mil cosas pendientes que de a poco voy a integrar. (tu opinión es bienvenida)</p>
+							<p>
+								<a href="http://www.twitter.com/wfranck"><strong>@wfranck</strong></a>
+							</p>
+						</div>
+					</div>
+					<span class="bl-icon bl-icon-close"></span>
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaA" class="frecuencia"></div>
+						<h1 id="boxLineaA" class="bl-icon">
+							<linea id="letraLineaA" class="bl-box">A</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">26'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenASale" class="promedionum"></div>
+							<div class="promediodesc">último Tren<br>a San Pedrito</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenAEntra" class="ultimotrennum">22:56</div>
+							<div class="ultimotrendesc">último Tren<br>a Plaza de Mayo</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								A								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoA" class="estado">Servicio Normal</div>
+							<div id="descA" class="descestado"></div>
+						</div>
+						<ul id="bl-work-items" class="mas">
+							<li data-panel="panel-A"></li>
+						</ul>						
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaB" class="frecuencia"></div>
+						<h1 id="boxLineaB" class="bl-icon ">
+							<linea id="letraLineaB" class="bl-box">B</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">27'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenBSale" class="promedionum">22:21</div>
+							<div class="promediodesc">último Tren<br>a J.M. de Rosas</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenBEntra" class="ultimotrennum">22:49</div>
+							<div class="ultimotrendesc">último Tren<br>a L.N. Alem</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								B								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoB" class="estado">Servicio Normal</div>
+							<div id="descB" class="descestado"></div>
+						</div>
+						<ul id="bl-work-items" class="mas">
+							<li data-panel="panel-B"></li>
+						</ul>						
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaC" class="frecuencia"></div>
+						<h1 id="boxLineaC" class="bl-icon">
+							<linea id="letraLineaC" class="bl-box">C</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">13'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenCSale" class="promedionum">22:45</div>
+							<div class="promediodesc">último Tren<br>a Constitución</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenCEntra" class="ultimotrennum">22:47</div>
+							<div class="ultimotrendesc">último Tren<br>a Retiro</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								C								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoC" class="estado">Servicio Normal</div>
+							<div id="descC" class="descestado"></div>
+						</div>
+						<ul id="bl-work-items" class="mas">
+							<li data-panel="panel-C"></li>
+						</ul>						
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaD" class="frecuencia"></div>
+						<h1 id="boxLineaD" class="bl-icon"><!-- messagebr"> -->
+							<linea id="letraLineaD" class="bl-box">D</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">26'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenDSale" class="promedionum">22:24</div>
+							<div class="promediodesc">último Tren<br>a C. de Tucumán</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenDEntra" class="ultimotrennum">22:51</div>
+							<div class="ultimotrendesc">último Tren<br>a Catedral</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								D								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoD" class="estado">Servicio Normal</div>
+							<div id="descD" class="descestado"></div>
+						</div>
+						<ul id="bl-work-items" class="mas">
+							<li data-panel="panel-D"></li>
+						</ul>						
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaE" class="frecuencia"></div>
+						<h1 id="boxLineaE" class="bl-icon">
+							<linea id="letraLineaE" class="bl-box">E</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">24'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenESale" class="promedionum">22:27</div>
+							<div class="promediodesc">último Tren<br>a Pza. de los Virreyes</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenEEntra" class="ultimotrennum">22:59</div>
+							<div class="ultimotrendesc">último Tren<br>a Bolivar</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								E								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoE" class="estado">Servicio Normal</div>
+							<div id="descE" class="descestado"></div>
+						</div>
+						<ul id="bl-work-items" class="mas">
+							<li data-panel="panel-E"></li>
+						</ul>						
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaH" class="frecuencia frecuenciah"></div>
+						<h1 id="boxLineaH" class="bl-icon bl-icon-h">
+							<linea id="letraLineaH" class="bl-box">H</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">13'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenHSale" class="promedionum">23:06</div>
+							<div class="promediodesc">último Tren<br>a Hospitales</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenHEntra" class="ultimotrennum">23:02</div>
+							<div class="ultimotrendesc">último Tren<br>a Corrientes</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								H								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoH" class="estado">Servicio Normal</div>
+							<div id="descH" class="descestado"></div>
+						</div>
+						<ul id="bl-work-items" class="mas">
+							<li data-panel="panel-H"></li>
+						</ul>						
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>				
+				<section id="bl-work-section">
+					<div class="bl-box">
+						<div id="frecuenciaLineaP" class="frecuencia"></div>
+						<h1 id="boxLineaP" class="bl-icon">
+							<linea id="letraLineaP" class="bl-box">P</linea>
+						</h1><!--linea info message-->
+					</div>
+					
+					<div class="bl-content">
+						<!--<div class="flechaizq"></div>
+						<div class="flechader"></div>-->
+						<div class="cajaCabecera">
+							<div class="entrecabecerasnum">27'</div>
+							<div class="entrecabecerasdesc">VIAJE ENTRE<br>CABECERAS</div>
+						</div>
+						<div class="cajaPromedio">
+							<div id="ultimotrenPPSale" class="promedionum">20:56</div>
+							<div class="promediodesc">último Tren<br>a Int. Saguier</div>
+						</div>
+						<div class="cajaUltimoTren">
+							<div id="ultimotrenPPEntra" class="ultimotrennum">21:23</div>
+							<div class="ultimotrendesc">último Tren<br>a Gral. Savio</div>
+						</div>
+						<div class="cajaLinea">
+							<div class="linea">
+								<div class="tituloLinea">Línea</div>
+								P								
+							</div>
+						</div>
+						<div class="cajaEstado">
+							<div id="estadoP" class="estado">Servicio Normal</div>
+							<div id="descP" class="descestado"></div>
+						</div>
+						<ul id="bl-work-items" class="mas">
+							<li data-panel="panel-P"></li>
+						</ul>						
+					</div>					
+
+					<span class="bl-icon bl-icon-close"></span>
+					
+				</section>
+				
+				
+				<!-- Panel items for the works -->
+				
+				
+				
+				<div class="bl-panel-items" id="bl-panel-work-items">
+					<div class="panelA" data-panel="panel-A">
+						<div>
+								
+								<h2 class="tituloDetalle">Línea A</h2>
+						        <div class="container">
+									<div class="accordion">
+										<div>
+											<input id="estacionA1" name="accordion-1" type="checkbox"/>
+											<label class="top lineaa" for="estacionA1">Plaza de Mayo</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Hipólito Yrigoyen 300</p>
+												<p>Esta estación cabecera, de anden central, está ubicada en el centro histórico de la Ciudad de Buenos Aires debajo de la plaza a la cual hace alusión su nombre.</p>
+												<p>Fue inaugurada el 1 de diciembre de 1913. En marzo de 2013 fue restaurada y se realizaron murales conmemorativos de los 100 años del subte en la Ciudad. Las obras, de Martín Ron y Triángulo Dorado, reflejan la conformación de la patria y las bases de justicia sobre la cual fue fundada.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA2" name="accordion-1" type="checkbox"/>
+											<label for="estacionA2">Perú</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Av. de Mayo 500</p>
+												<p>Esta estación está ubicada sobre la Avenida de Mayo, en el Barrio de Monserrat.</p>
+												<p>Fue inaugurada el 1 de diciembre de 2013 y en 1997 fue declarada monumento histórico nacional. La estación está ornamentada con una galería de arte, una exposición fotográfica de la construcción del subterráneo y un mural. El Mundo según Mafalda, dedicado a la célebre historieta de Quino. En marzo de 2013 fue restaurado buscando preservar su estructura y diseño original.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA3" name="accordion-1" type="checkbox"/>
+											<label for="estacionA3">Piedras</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. de Mayo 900</p>
+												<p>Esta estación está ubicada en la zona céntrica de la Ciudad sobre la Avenida de Mayo, intersección con calle Piedras.</p>
+												<p>Fue inaugurada el 1 de diciembre de 1913 y en 1997 fue declarada monumento histórico nacional. En marzo de 2013 la estación fue ornamentada. Cuenta con 12 fotografías intervenidas por e arquitecto y pintor Miguel D'Arienzo.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA4" name="accordion-1" type="checkbox"/>
+											<label for="estacionA4">Lima</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Av. de Mayo 1101</p>
+												<p>Esta estación está ubicada sobre la Avenida de Mayo, a pocos metros de la Avenida 9 de Julio y al Obelisco.</p>
+												<p>Fue inaugurada el 1 de diciembre de 1913 y en 1997 fue declarada monumento histórico nacional. La estacion está ornamentada con un mural cerámico, Gente de Buenos Aires, de Horacio Altuna y otro, Músicos de Buenos Aires, de Hermenegildo Sábat. En marzo de 2013, la estación fue restaurada en su totalidad y se sumaron 10 obras en el andén del artista Gustavo Godoy.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA5" name="accordion-1" type="checkbox"/>
+											<label for="estacionA5">Sáenz Peña</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. de Mayo 1400</p>
+												<p>Esta estación está ubicada en Avenida de Mayo y Sáenz Peña, a metros de la Plaza Lorea y la Plaza Mariano Moreno.</p>
+												<p>Fue bautizada en honor al décimo segundo presidente de la República Argentina y en 1997 fue declarada monumento histórico nacional. En marzo de 2013, la estación fue restaurada en su totalidad y se colocaron 16 obras de estilo pop de la renombrada artista Marta Minujín.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA6" name="accordion-1" type="checkbox"/>
+											<label for="estacionA6">Congreso</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 1800</p>
+												<p>Esta estación está ubicada sobre la Avenida Rivadavia, en el Barrio de Balvanera. Fue Nombrada en honor al Congreso de la Nación Argentina. ubicado en las inmediaciones.</p>
+												<p>Fue inaugurada el 1 de diciembre de 1913 y en 1997 fue declarada monumento histórico nacional. La estación cuenta con una vitrina en homenaje al Congreso de la Nación y un mural cerámico, El Nacimiento de la Patria, del artista Carlos Nine.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA7" name="accordion-1" type="checkbox"/>
+											<label for="estacionA7">Pasco</label>
+											<div class="article ac-large">
+												<p>Av. Rivadavia 2200</p>
+												<p>Esta estación está ubicada sobre la Avenida Rivadavia en la intersección con calle Pasco, en el Barrio de Balvanera.</p>
+												<p>Fue inaugurada el 1 de diciembre de 1913 y en 1997 fue declarada monumento histórico nacional. La estación cuenta con una particularidad: el tren sólo se detiene ahí cuando viaja en dirección a Plaza de Mayo ya que el andén sur fue clausurado en 1951; despertando una serie de mitos y leyendas urbanas.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA8" name="accordion-1" type="checkbox"/>
+											<label for="estacionA8">Alberti</label>
+											<div class="article ac-large">
+												<p>Av. Rivadavia 2400</p>
+												<p>Esta estación está ubicada sobre la Avenida Rivadavia en la intersección con la calle Alberti, en el Barrio de Balvanera.</p>
+												<p>Fue inaugurada el 1 de diciembre de 1913 y en 1997 fue declarada monumento histórico nacional. La estación cuenta con una particularidad: el tren solo se detiene allí cuando viaja en dirección a Carabobo; ya que el andén norte fue clausurado en 1951.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA9" name="accordion-1" type="checkbox"/>
+											<label for="estacionA9">Plaza Miserere</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Av. PueyrRedón 2100</p>
+												<p>Ubicada en la intersección de las Avenidas Rivadavia y Pueyrredón.</p>
+												<p>Fue inaugurada inaugurada el 1 de diciembre de 1913  y en 1997 fue declarada monumento histórico nacional. En marzo de 2013 la estación fue restaurada en su totalidad y se llevaron a cabo distintas intervenciones artísticas. En el vestíbulo central, se puede aprecia la fachada original 11 de septiembre.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA10" name="accordion-1" type="checkbox"/>
+											<label for="estacionA10">Loria</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 3400</p>
+												<p>Ubicada sobre la Avenida Rivadavia en la intersección con la calle Sánchez de Loria, en el Barrio de Balvanera.</p>
+												<p>Fue inaugurada el 1 de abril de 1914, siendo este el segundo tramo de la Línea A. La estación fue restaurada en su totalidad en marzo de 2013 y se incorporaron fotografías que detallan el avance de las obras más recientes de la red.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA11" name="accordion-1" type="checkbox"/>
+											<label for="estacionA11">Castro Barros</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 3900</p>
+												<p>Esta estación está ubicada sobre la Avenida Rivadavia, una de las principales arterias de la Ciudad, en el Barrio de Almagro.</p>
+												<p>Fue inaugurada el 1 de abril de 1914, siendo este el segundo tramo de la Línea A. La estación fue restaurada en su totalidad en marzo de 2013 y se incorporaron murales de Julio Lavallén con la temática del boxeo, por la cercanía de la estación a la Federación Argentina de Boxeo.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA12" name="accordion-1" type="checkbox"/>
+											<label for="estacionA12">Río de Janeiro</label>
+											<div class="article ac-large">
+												<p>Av. Rivadavia 4500</p>
+												<p>Esta estación está ubicada sobre Avenida Rivadavia en la intersección con la calle Río de Janeiro, en el Límite de los Barrios de  Caballito y Almagro.</p>
+												<p>Fue inaugurada el 1 de abril de 1914, siendo este el segundo tramo de la línea A. La estación fue restaurada en su totalidad en marzo de 2013 y se colocaron 10 obras del artista Quinquela Martín.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA13" name="accordion-1" type="checkbox"/>
+											<label for="estacionA13">Acoyte</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 5000</p>
+												<p>Ubicada a metros del Parque Rivadavia, en el Barrio de Caballito.</p>
+												<p>Fue inaugurada en julio de 1914, dando inicio al tercer tramo de la línea A. La estación fue restaurada en marzo de 2013 y se incorporaron 16 obras del artista Claudio Gallina con la temática de la educación en referencia a las escuelas ubicadas en sus cercanías.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA14" name="accordion-1" type="checkbox"/>
+											<label for="estacionA14">Primera Junta</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 5300</p>
+												<p>La estación de 2 plataformas centrales está ubicada en la Avenida Rivadavia, en la intersección con la calle Del Barco Dentenera, en el Barrio de Caballito. El nombre de la estación homenajea al primer gobierno patrio surgido después de la Revolución de Mayo.</p>
+												<p>Fue inaugurada en julio de 1914 dando inicio al tercer tramo de la Línea A. La estación fue restaurada en marzo de 2013 cuando se colocaron los espejos para trabajar sobre la concientización de los usuarios sobre el cuidado del transporte y los espacios públicos.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA15" name="accordion-1" type="checkbox"/>
+											<label for="estacionA15">Puan</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 5900</p>
+												<p>La estación está emplazada debajo de la intersección de la Avenida Rivadavia y calle Puan, en el Barrio de Caballito.</p>
+												<p>Fue inaugurada en diciembre de 2008. La estación cuenta con un diseño moderno con un vestíbulo intermedio y obras de street art en sus tímpanos, como una nueva representación de la cultura e imaginario porteño.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA16" name="accordion-1" type="checkbox"/>
+											<label for="estacionA16">Carabobo</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 6300</p>
+												<p>La estación terminal está emplazada debajo de la intersección de la Avenida Rivadavia y la calle Carabobo, en el barrio de Flores.</p>
+												<p>Fue inaugurada en diciembre de 2008. La estación cuenta con un diseño moderno con un vestíbulo intermedio y obras de street art en sus tímpanos, como una nueva representación de la cultura e imaginario porteño.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA17" name="accordion-1" type="checkbox"/>
+											<label for="estacionA17">San José de Flores</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 6950</p>
+												<p>Emplazada debajo debajo de la intersección de la Avenida Rivadavia y la calle Gral. José G. Artigas en el barrio de Flores. La estación cuenta con un diseño moderno: un vestíbulo intermedio donde se encuentran las boleterías y antenas laterales de 110 metros.</p>
+												<p>Fue inaugurada en agosto de 2013. La estación tiene obras de Guillermo Roux, considerado una estética cultural histórica y un desarrollo temático vinculado con la vida del barrio de Flores, desde su fundación hasta el bicentenario.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionA18" name="accordion-1" type="checkbox"/>
+											<label class="bottom" for="estacionA18">San Pedrito</label>
+											<div class="article ac-large bottom">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Av. Rivadavia 7450</p>
+												<p>Emplazada debajo cela interseccieon de las avenidas Rivadavia y Nazca, en el barrio de Flores. La estación cuenta con un diseño moderno: un vestíbulo intermedio donde se encuentran las boleterías y antenas laterales de 110 metros.</p>
+												<p>Fue inaugurada en agosto de 2013. La estación tiene una reproducción de la obra Luna con Corona Blanca del artista Eugenio Cuttica y 4 Retratos de personajes representativos del barrio.</p>
+											</div>
+										</div>
+																		
+									</div>
+						        </div>
+					
+						</div>
+					</div>
+					
+					
+					<div class="panelB" data-panel="panel-B">
+						<div>
+								
+								<h2 class="tituloDetalle">Línea B</h2>
+						        <div class="container">
+									<div class="accordion">
+										<div>
+											<input id="estacionB1" name="accordion-1" type="checkbox"/>
+											<label class="top" for="estacionB1">Leandro N. Alem</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 200</p>
+												<p>Esta estación cabecera, de andén central está ubicada en Av. Corrientes y Av. Leandro N. Alem, dentro de los límites del Barrio San Nicolás y a metros del Palacio de Correos.</p>
+												<p>Fue inaugurada el 1 de diciembre de 1931. En marzo de 2013 la estación fue restaurada y se realizaron trabajos para su puesta en valor.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB2" name="accordion-1" type="checkbox"/>
+											<label for="estacionB2">Florida</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 500</p>
+												<p>Ubicada en Av. Corrientes y calle Florida, en el Barrio porteño de San Nicolás, a pocos metros de la peatonal Florida.</p>
+												<p>Fue inaugurada el 15 de diciembre de 1931. En el anden se encuentra el mural de Mariano Imposti Indart de 1998, dedicado a la célebre historieta argentina de Patoruzú.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB3" name="accordion-1" type="checkbox"/>
+											<label for="estacionB3">Carlos Pellegrini</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 900</p>
+												<p>Ubicada en Av. Corrientes y calle Carlos Pellegrini, en Barrio de San Nicolás, a pocos metros del Obelisco y del Teatro Colón.</p>
+												<p>Fue inaugurada el 22 de junio de 1931. En el entrepiso se puede apreciar un bajo relieve en homenaje a Federico Lacroze y un mural cerámico de Pablo Siquier, inspirado en conceptos geométricos. La estación es parte del llamado nodo obelisco.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB4" name="accordion-1" type="checkbox"/>
+											<label for="estacionB4">Uruguay</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 1400</p>
+												<p>Esta estación está ubicada en Av. Corrientes y la calle Utuguay, en el Barrio de San Nicolás, a pocos metros del Teatro Gral San Martín.</p>
+												<p>Fue inaugurada el 22 de junio de 1931. El 22 de diciembre de 2003 se convirtió en la primer estación temática de la red de subtes dedicando su decoración al cine argentino y su historia. El andén norte está ornamentado con un mural de Francisco Solano López y Francisco Breccia, recordando la obra del Eternauta y murales con los personajes inodoro Pereyra y Mendieta, de Roberto Fontanarrosa. En el andén sur se encuentra una obra del humorista Cristobal Reynoso.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB5" name="accordion-1" type="checkbox"/>
+											<label for="estacionB5">Callao</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 1800</p>
+												<p>Esta estación está ubicada en Av. Corrientes y la Avenida Callao, en el Barrio Balvanera a 500 metros del Palacio de Aguas Corrientes.</p>
+												<p>Fue inaugurado el 17 de octubre de 1930. La estación cuenta en su andén sur con 2 murales de 1991; Desolación y Amor, de Daniel Kaplan y, Altar Porteño de Hector Meana. El andén norte tiene, además, una obra de Tomás Fracchia, El Enigma del Espacio y del Tiempo.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB6" name="accordion-1" type="checkbox"/>
+											<label for="estacionB6">Pasteur</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 2300</p>
+												<p>Esta estación está ubicada en Av. Corrientes y la calle Pasteur, en el Barrio de Balvanera a 600 metros de la Estación Facultad de Medicina de la Línea D.</p>
+												<p>Fue inaugurada el 17 de octubre de 1930 como parte del tramo Federico Lacroze - Callao.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB7" name="accordion-1" type="checkbox"/>
+											<label for="estacionB7">Pueyrredón</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 2700</p>
+												<p>Ubicada en las intersecciones de las Avenidas Corrientes y Avenida Pueyrredón, en el Barrio de Balvanera.</p>
+												<p>Fue inaugurada el 22 de junio de 1931. En el andén sur cuenta con tres murales. Los Elementos, de Juan Doffo, Santuario de Germán Gargano y Subcielo de Buenos Aires de Ernesto Pesce.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB8" name="accordion-1" type="checkbox"/>
+											<label for="estacionB8">Carlos Gardel</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 3300</p>
+												<p>Ubicada en Av. Corrientes y calle Agüero, dentro de la zona conocida como Abasto.</p>
+												<p>Fue inaugurada el 17 de octubre de 1930 con el nombre de Agüero que luego fue modificada en nombre al célebre cantante de tango Carlos Gardel. La estación cuenta con 2 murales de la ceramista, Ingeborn Ringer con diseño de Carlos Paez Villaró y un filete realizado por León Untroib. El entrepiso está ornamentado también con obras de L. Pestchanker.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB9" name="accordion-1" type="checkbox"/>
+											<label for="estacionB9">Medrano</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 3900</p>
+												<p>Ubicada en la intersección de las Avenidas Corrientes y Medrano, en el Barrio de Almagro, próxima a la plaza.</p>
+												<p>Fue inaugurada el 17 de octubre de 1930. El andén norte está decorado con un mural de Ricardo Roux y la obra de L. Wells.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB10" name="accordion-1" type="checkbox"/>
+											<label for="estacionB10">Angel Gallardo</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 4600</p>
+												<p>Ubicada en la intersección de las Avenidas Corrientes y ángel Gallardo, en el Barrio de Almagro, cerca del Parque Centenario y del Museo Argentino de Ciencias Naturales.</p>
+												<p>Fue inaugurada el 17 de octubre de 1930. La estación está ornamentada con 3 murales: un díptico conformado con dos murales de Marcia Schvartz y un mural de Margarita Pakza denominado Flores de mi país.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB11" name="accordion-1" type="checkbox"/>
+											<label for="estacionB11">Malabia</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 5200</p>
+												<p>Ubicada en la intersección de las Avenidas Corrientes y calle Malabia, en el Barrio de Villa Crespo. En 2010 se incorporó el nombre Osvaldo Pugliese en honor al artista tangueo nacido en el Barrio.</p>
+												<p>Fue inaugurada le 17 de octubre de 1930. En el andén sur se encuentra el mural de la artista Luz Zorraquin, llamado Metamorfosis: de flor a tomillo.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB12" name="accordion-1" type="checkbox"/>
+											<label for="estacionB12">Dorrego</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 6000</p>
+												<pLa estación está ubicada en la intersección de las Avenidas Corrientes y Dorrego, en el Barrio de Chacarita.</p>
+												<p>Fue inaugurada el 17 de octubre de 1930. La estación fue decorada con 4 murales. En el andén norte se encuentra la obra de Mildred Burton y al andén sur lo decoran murales de Roberto Scarfidi, José María Caceres y Juan José Cambre.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB13" name="accordion-1" type="checkbox"/>
+											<label for="estacionB13">Federico Lacroze</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Corrientes 6800</p>
+												<p>Ubicada en la intersección de las Avenidas Corrientes y Federico Lacroze, en las cercanías del Cementerio de Chacarita.</p>
+												<p>Fue inaugurada el 17 de octubre de 1930. Posee en el andén sur el mural El Destino, de Gustavo Grünig, y una obra de Emma Gargiulo.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB14" name="accordion-1" type="checkbox"/>
+											<label for="estacionB14">Tronador - Villa Ortúzar</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Triunivirato 3000</p>
+												<p>Ubicada en el cruce de la Avenida Triunvirato con Tronador, en el barrio de Villa Ortúzar.</p>
+												<p>Fue inaugurada el 9 de agosto de 2003. La decoración, basada en vitrales de colores, retoma la historia del Barrio a través de 18 obras de arte realizadas en el taller de Roberto José Soler. En la estación se exhiben también los restos de gliptodontes encontrados mientras se llevaba a cabo la excavación del túnel.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB15" name="accordion-1" type="checkbox"/>
+											<label for="estacionB15">De los Incas - Parque Chas</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. de los Incas 4200</p>
+												<p>Ubicada en el cruce de la Avenida Triunvirato y la calle Echeverría, en el barrio de Villa Urquiza.</p>
+												<p>Fue inaugurada el 26 de julio de 2013. La estación cuenta con un diseño moderno: amplios vestíbulos donde se encuentran las boleterías, vestíbulos intermedios y andén lateral. La estación está decorada con reproducciones de la artista Carolina Antoniadis.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionB16" name="accordion-1" type="checkbox" class=""/>
+											<label class="bottom" for="estacionB16">Juan Manuel de Rosas</label>
+											<div class="article ac-large bottom">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Roosevelt 5100</p>
+												<p>La estación terminal de la Línea B está ubicada en la Avenida Triunvirato entre las avenidas Monroe y Franklin D. Roosevelt, en el barrio de Villa Urquiza.</p>
+												<p>Fue <a href="http://www.youtube.com/watch?v=cbnguXvF3QE">inaugurada el 26 de julio de 2013</a>. La estación está decorada en los vestíbulos con reproducciones de <a href="http://www.youtube.com/watch?v=JJh9Y97ajw4">obras</a> del artista Andrés Waissan: Multitudes, La Alcantarrilla de Dios y La Cosecha. En el andén y tímpano, se colocaron obras originales de Julio Lavallén: Tropillas sobre andenes y Encuentro de trompillas.</p>
+											</div>
+										</div>
+																		
+									</div>
+						        </div>
+					
+						</div>
+
+					</div>
+					<div class="panelC" data-panel="panel-C">
+						<div>
+								
+								<h2 class="tituloDetalle">Línea C</h2>
+						        <div class="container">
+									<div class="accordion">
+										<div>
+											<input id="estacionC1" name="accordion-1" type="checkbox"/>
+											<label class="top" for="estacionC1">Retiro</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Dr. José Ramos Mejía 1400</p>
+												<p>Estación cabecera ubicada en Av. Dr. José Ramos Mejía y Gilardo Gilardi, en el Barrio de Retiro.</p>
+												<p>Fue inaugurada el 6 de febrero de 1936. El vestíbulo se encuentra ornamentado con 3 murales de Fallieri: Las Máscaras, Gistorias del Sábado y Las Primeras Luces.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionC2" name="accordion-1" type="checkbox"/>
+											<label for="estacionC2">San Martín</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Santa Fe 800</p>
+												<p>Está ubicada entre la Avenida Santa Fe y Esmeralda, bajo la Plaza San Martín, en el Barrio de Retiro.</p>
+												<p>Fue inaugurada el 17 de agosto de 1937 y fue declarada monumento histórico nacional en 1997. Posee 8 murales de cemente policromado realizados por el artista plástico Rodolfo Medina bajo la temática de gesta sanmartiniana.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionC3" name="accordion-1" type="checkbox"/>
+											<label for="estacionC3">Lavalle</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Esmeralda 500</p>
+												<p>Ubicada entre las calles Lavalle y Esmeralda en el Barrio de San Nicolás.</p>
+												<p>Fue inaugurada el 6 de febrero de 1936 y fue declarada monumento histórico nacional en 1997. Posee 2 murales cerámicos en sus andenes laterales, basados en bocetos de Noel y Manuel Escasany, que pertenecen a la serie Paisajes de España.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionC4" name="accordion-1" type="checkbox"/>
+											<label for="estacionC4">Diagonal Norte</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Sarmiento 800</p>
+												<p>Ubicada en la avenida Roque Sáenz Peña y Samiento, intersección conocida como Diagonal Norte, a metros del Obelisco porteño.</p>
+												<p>Fue inaugurada el 9 de noviembre de 1934 y fue declarada monumento histórico nacional en 1997. Posee 2 murales cerámicos en sus andenes laterales, basados en bocetos de Noel y Manuel Escasany, que pertenecen a la serie Paisajes de España.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionC5" name="accordion-1" type="checkbox"/>
+											<label for="estacionC5">Avenida de Mayo</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. de Mayo 900</p>
+												<p>La estación está ubicada en la calle Bernardo de Irigoyen y Avenida de Mayo, en el Barrio de Monserrat.</p>
+												<p>Fue inaugurada el 9 de noviembre de 1934 y declarada monumento histórico nacional en 1997. Posee 2 murales cerámicos: en el andén Este, un boceto dibujado por Ignacio Zuloag; en el andén Oeste, se encuentra el mural España Argentina MCMXXIV, de un boceto realizado por Fernando Alvarez Sotomayor.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionC6" name="accordion-1" type="checkbox"/>
+											<label for="estacionC6">Mariano Moreno</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Bernardo de Irigoyen 300</p>
+												<p>La estación está ubicada en la calle Bernardo de Irigoyen y Moreno, en el Barrio de Monserrat.</p>
+												<p>Fue inaugurada el 9 de noviembre de 1934 y fue declarada monumento histórico nacional en 1997. Sus andenes laterales están ornamentados con murales cerámicos basados en bocetos de Noel y Manuel Escasany.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionC7" name="accordion-1" type="checkbox"/>
+											<label for="estacionC7">Independencia</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Bernardo de Irigoyen 700</p>
+												<p>Está ubicada en la Avenida Independencia y la calle Bernardo de Irigoyen, en el Barrio de Constitutución.</p>
+												<p>Fue Inaugurada el 9 de noviembre de 1934 y fue declarada monumento histórico nacional en 1997. Sus andenes laterales están ornamentados con murales cerámicos basados en bocetos de Noel y Manuel Escasany.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionC8" name="accordion-1" type="checkbox"/>
+											<label for="estacionC8">San Juan</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Bernardo de Irigoyen 1100</p>
+												<p>Ubicada en la intersección de la Avenida San Juan y la Calle Bernardo de Irigoyen, en el Barrio de Constitución.</p>
+												<p>Fue inaugurada el 9 de noviembre de 1934 y declarada monumento histórico nacional en 1997. Sus andenes laterales están ornamentados con murales cerámicos basados en bocetos de Noel y Manuel Escasany. En el andén Oeste se encuentra el mural Badajoz, Caseres y, en el andén Este, Salamanca.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionC9" name="accordion-1" type="checkbox" class=""/>
+											<label class="bottom" for="estacionC9">Constitución</label>
+											<div class="article ac-large bottom">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Lima 1600</p>
+												<p>La estación cabecera sur, de plataforma central y lateral, está ubicada en Avenida Brasil y Lima, en el Barrio de Constitución.</p>
+												<p>Fue inaugurada el 9 de noviembre de 1934. Está decorada con murales cerámicos que reproducen obras del artista Molina Campos.</p>
+											</div>
+										</div>
+																		
+									</div>
+						        </div>
+					
+						</div>
+					</div>
+					<div class="panelD" data-panel="panel-D">
+						<div>
+								
+								<h2 class="tituloDetalle">Línea D</h2>
+						        <div class="container">
+									<div class="accordion">
+										<div>
+											<input id="estacionD1" name="accordion-1" type="checkbox"/>
+											<label class="top" for="estacionD1">Catedral</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>San Martín 1</p>
+												<p>La estación cabecera de la Línea D está ubicada en la intersección de la calle San Martín y Avenida Roque Sáenz Peña.</p>
+												<p>Fue inaugurada el 3 de junio de 1937 y fue declarada monumento histórico nacional en 1997. La estación, de andenes laterales, cuenta con obras de Rodolfo Franco. En el andén sur se puede observar la obra que muestra la Ciudad de Buenos Aires y su sociedad alrededor de 1830. En contraposición del andén norte se ve reflejado la Buenos Aires cosmopolita de 1936.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD2" name="accordion-1" type="checkbox"/>
+											<label for="estacionD2">9 de Julio</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Carlos Pellegrini 300</p>
+												<p>Esta estación está ubicada en la intersección de la Avenida 9 de Julio y Avenida Roque Sáenz Peña, en el Barrio de San Nicolás a metros del Obelisco. La estación es parte del nodo obelisco.</p>
+												<p>Fue inaugurada el 3 de junio de 1937 y fue declarada monumento histórico naciona en 1997. La estación, de andenes laterales, tiene en el lado sur, la obra de Alfredo Guido, San José de Flores y, en el lado norte, la obra que refleja la pampa húmeda.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD3" name="accordion-1" type="checkbox"/>
+											<label for="estacionD3">Tribunales</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Talcahuano</p>
+												<p>Ubicada en la Plaza Lavalle, en la intersección de la calle Lavalle y Talcahuano, en el Barrio de San Nicolás. Su nombre se debe a la cercanía con el Palacio de Justicia y su zona lindante conocida como Tribunales. Próxima a la estación se encuentra también el célebre Teatro Colón.</p>
+												<p>Fue inaugurada el 3 de junio de 1937 y declarada monumento histórico nacional en 1997. La estación, de andén central, cuenta con obras basadas en bocetos de Rodolfo rancho. En el extremo Oeste, se puede apreciar la obra Las Dos Fundaciones de Buenos Aires y, en el extremo Este, España y América.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD4" name="accordion-1" type="checkbox"/>
+											<label for="estacionD4">Callao</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+												</p>
+												<p></p>
+												<p>Av. Córdoba 1800</p>
+												<p>Esta estación está ubicada en la intersección de las Avenidas Córdoba y Callao, en el Barrio de Balvanera, a 100 metros de la Plaza Rodriguez Peña y el Ministerio de Eduación de la Nación.</p>
+												<p>Fue inaugurado el 29 marzo de 1938.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD5" name="accordion-1" type="checkbox"/>
+											<label for="estacionD5">Facultad de Medicina</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Córdoba 2100</p>
+												<p>Esta estación está ubicada sobre la Avenida de Mayo, en el Barrio de Monserrat.</p>
+												<p>Fue inaugurado el 10 de junio de 1938 y declarada monumento histórico nacional en 1997. La estación, de andenes laterales, tiene 2 murales de Alfredo Guido: en el andén norte, Puente Setubal, el Río Paraná y La Rosario, y en el andén sur, muestra la ciudad de Rosario en 1836.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD6" name="accordion-1" type="checkbox"/>
+											<label for="estacionD6">Pueyrredón</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Santa Fe 2500</p>
+												<p>Ubicada en la intersección de las Avenidas Santa Fe y Pueyrredón, en el barrio de Recoleta.</p>
+												<p>Fue inaugurada el 5 de septiembre de 1938 y declarada monumento histórico nacional en 1997. La estación, de andén central, cuenta en sus pasillos con decorados cerámicos Cattaneo. Actualmnete, se construye la Estación Santa Fe de la Línea H que permitirá la combinación entre ambas líneas.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD7" name="accordion-1" type="checkbox"/>
+											<label for="estacionD7">Agüero</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Santa Fe 2900</p>
+												<p>Está ubicada en la intersección de la Avenida Santa Fe y calle Agüero, en el Barrio de Recoleta, a pocos metros del Hospital de Niños, Dr. Ricardo Guitiérrez.</p>
+												<p>Fue inaugurada el 5 de septiembre de 1938 y declarada monumento histórico nacional en 1997. La estación, de andenes laterales, cuenta con murales del artista italiano Rodolfo Franco: del lado norte se puede apreciar la obra Camino de Córdoba y, en el andén sur, Los Colonizadores. Los murales muestran el contraste entre la llegada de los conquistadores a las tierras del Río de la Plata y la sociedad española ya asentada en tierra argentina.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD8" name="accordion-1" type="checkbox"/>
+											<label for="estacionD8">Bulnes</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Santa Fe 3200</p>
+												<p>Esta estadión está ubicada en la intersección de la Avenida Santa Fe y Bulnes, en el Barrio de Palermo.</p>
+												<p>Fue inaugurada el 29 de diciembre de 1938 y declarada monumento histórico nacional en 1997. Los andenes están decorados con obras de Alfredo Guido. En el lado sur se puede apreciar la obra Leyenda del País de la Selva, y en el lado norte, Arqueología Diaguita, Los Valles, Tucumán, La Zafra, Los Ingenios.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD9" name="accordion-1" type="checkbox"/>
+											<label for="estacionD9">Scalabrini Ortiz</label>
+											<div class="article ac-large">
+												<p>Av. Santa Fe 3700</p>
+												<p>Esta estación ubicada en la intersección de la Avenida Santa Fe y la Avenida Scalabrini Ortiz, en el barrio de Palermo.</p>
+												<p>Fue inaugurada el 29 de diciembre de 1938 y fue declarada monumento histórico nacional en 1997. La estación, de andenes laterales, tiene en el lado sur, la obra Pobladores del Altiplano 1938 de Rodolfo Franco y, en el lado norte, la obra Evocaciones de Salta, del mismo autor.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD10" name="accordion-1" type="checkbox"/>
+											<label for="estacionD10">Plaza Italia</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Santa Fe 4100</p>
+												<p>Ubicada en la intersección de la Avenida Santa Fe y la calzada circular que rodea Plaza Italia, en el Barrio de Palermo, próxima al Zoológico de Buenos Aires, el Jardín Botánico y el predio de la Sociedad Rural Argentina.</p>
+												<p>Fue inaugurada el 29 de diciembre de 1938 y declarada monumento histórico nacional en 1997. La estación de andén central tiene el suelo decorado con un boceto del pintor argentino Benito Quinquela Martín realizado por Constantino Yuste llamado La Descarga de los Comboyes. se puede apreciar también diferentes obras del artista Leonie Matthis.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD11" name="accordion-1" type="checkbox"/>
+											<label for="estacionD11">Palermo</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Santa Fe 4600</p>
+												<pUbicada en la íntersección de la Avenida Santa Fe y Avenida Juan B. Justo, en el Barrio de Palermo.</p>
+												<p>Fue inaugurada el 23 de febrero de 1940 y declarada monumento histórico nacional en 1997. En el vestíbulo se puede apreciar la obra Almería de Cuenca Muñoz.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD12" name="accordion-1" type="checkbox"/>
+											<label for="estacionD12">Ministro Carranza</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Santa Fe 5300</p>
+												<p>Esta estación está ubicada en la intersección de la Avenida Santa Fe y Dorrego, bajo el viaducto Carranza, en el Barrio de Palermo.</p>
+												<p>Fue inaugurada el 29 de diciembre de 1987 en forma parcial, y el 1 de diciembre de 1993 con ambas vías. En el vestíbulo se puede apreciar la escultura denominada Hombre en Ciclomotor de Yoel Novoa.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD13" name="accordion-1" type="checkbox"/>
+											<label for="estacionD13">Olleros</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Cabildo 700</p>
+												<p>Está ubicada en la intersección de la Avenida Cabildo y Olleros, en el límite de los Barrios Colegiales y Palermo.</p>
+												<p>Fue inaugurada el 31 de mayo de 1997. Decoran la estación, dos murales de Josefina Robirosa denominados Plaza de Verano y Plaza de Invierno.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD14" name="accordion-1" type="checkbox"/>
+											<label for="estacionD14">José Hernández</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Cabildo 1700</p>
+												<p>Ubicada en la intersección de la Avenida Cabildo y José Hernández, en el Barrio de Belgrano.</p>
+												<p>Fue inaugurada el 13 de noviembre de 1997. Esta fue la primer estación de la red en contar con acceso directo para gente con movilidad reducida desde el nivel de la calle hasta el andén. Decoran la estación 4 murales cerámicos que son reproducciones del pintor argentino Raul Soldi: En el Jardín, Los Amantes, La Música y Los Amantes. Además, a nivel de vestíbulo suelen exponerse obras de distintos autores.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD15" name="accordion-1" type="checkbox"/>
+											<label for="estacionD15">Juramento</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Cabildo 2000</p>
+												<p>Esta estación está ubicada sobre la Avenida de Mayo, en el Barrio de Monserrat.</p>
+												<p>Fue inaugurada el 21 de junio de 1999. La ornamentación de la estación es un recorrido de arte en donde se pueden apreciar desde obras sobre la historia del Barrio, pasando por murales en honor al Gral Manuel Belgrano, recuerdos conmemorativos de la guerra de las Islas Malvinas hasta fotografías de parejas tangueras.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionD16" name="accordion-1" type="checkbox" class=""/>
+											<label class="bottom" for="estacionD16">Congreso de Tucumán</label>
+											<div class="article ac-large bottom">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+												</p>
+												<p></p>
+												<p>Av. Cabildo 2800</p>
+												<p>Estación cabecera ubicada en la intersección de las Avenidas Cabildo y Congreso, en el límite de los Barrios Belgrano y Núñez.</p>
+												<p>Fue inaugurada el 27 de abril de 2000. La ornamentación de la estación incluye una serie de bustos entre los que se encuentran unos de Jorge Luis Borges y Carlos Gardel hasta vitrinas con objetos. Además, cuenta con el mural La Reconquista de Buenos Aires, de Charles Fourqueray y una reproducción de la obra La cuesta de Chacabuco de Pedro Subercaseaux.</p>
+											</div>
+										</div>
+																		
+									</div>
+						        </div>
+					
+						</div>
+					</div>
+					<div class="panelE" data-panel="panel-E">
+						<div>
+								
+								<h2 class="tituloDetalle">Línea E</h2>
+						        <div class="container">
+									<div class="accordion">
+										<div>
+											<input id="estacionE1" name="accordion-1" type="checkbox"/>
+											<label class="top" for="estacionE1">Bolivar</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Pres. Julio A. Roca 501</p>
+												<p>Estación cabecera, de andén central, ubicada en la Avenida Julio A. Roca, entre Bolívar e Hipólito Yrigoyen, en el Barrio de Monserrat, a metros de Plaza de Mayo.</p>
+												<p>Fue inaugurada el 24 de abril de 1966. En su vertíbulo en 1983 se colocó la escultura Homenaje a la Madre, de Nilda Toledo Guma.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE2" name="accordion-1" type="checkbox"/>
+											<label for="estacionE2">Belgrano</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Belgrano 800</p>
+												<p>Ubicada en las Avenidas Belgrano y Julio A. Roca, en el Barrio de Monserrat.</p>
+												<p>Fue inaugurada el 24 de abril de 1966. Sus andenes laterlaes están decorados con azulejos celestes y blancos que conforman la imagen de la bandera argentina.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE3" name="accordion-1" type="checkbox"/>
+											<label for="estacionE3">Independencia</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Bernardo de Irigoyen 700</p>
+												<p>Esta estación, de andén centra, está ubicada en la Avenida Independencia y Lima, en el Barrio de Constitución.</p>
+												<p>Fue inaugurada el 24 de abril de 1966. La estación está decorada con la obra del cordobés, Antonio Seguí, denominada: Saliendo.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE4" name="accordion-1" type="checkbox"/>
+											<label for="estacionE4">San José</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. San Juan 1400</p>
+												<p>Ubicada en la Avenida San Juan y San José, en el Barrio de Constitución. En sus cercanías se encuentra la Facultad de Ciencias Sociales de la Universidad de Buenos Aires.</p>
+												<p>Fue inaugurada el 24 de abril de 1966 y fue declarada monumento histórico nacional en 1997. Tiene una particularidad ya que sus andenes se encuentran totalmente separados uno del otro.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE5" name="accordion-1" type="checkbox"/>
+											<label for="estacionE5">Entre Ríos</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Entre Ríos 1100</p>
+												<p>Esta estación está ubicada en la Avenida San Juan y Avenida Entre Ríos, en el Barrio de San Cristobal. En marzo de 2013, la Legislatura porteña cambió su nombre original sumándole el del famoso escritor Rodolfo Walsh.</p>
+												<p>Fue inaugurada el 20 de junio de 1944 y fue declarada monumento histórico nacional en 1997. Sus andenes laterales están decorados con bocetos de Antonio Ortiz Echagüe que reflejan el avance sobre las tierras de la Patagonia.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE6" name="accordion-1" type="checkbox"/>
+											<label for="estacionE6">Pichincha</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. San Juan 2200</p>
+												<p>Ubicada en la Avenida San Juan y calle Pichincha, en el Barrio de San Cristobal.</p>
+												<p>Fue inaugurada el 20 de junio de 1944 y fue declarada monumento histórico nacional en 1997. Sus andenes laterales están decorados con obras basadas en bocetos de Cuenca Muñoz. En el andén sur se puede apreciar Cordillera de los Andes y en el andén norte Valles de la Cordillera de los Andes.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE7" name="accordion-1" type="checkbox"/>
+											<label for="estacionE7">Jujuy</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. San Juan 2700</p>
+												<p>Ubicada en la Avenida San Jan y Avenida Jujuy, en el barrio de San Cristóbal.</p>
+												<p>Fue inaugurada el 20 de junio de 1944 y fue declarada monumento histórico nacional en 1997. Sus andenes laterales están decorados con obras de Alejandro Sirio que homenajean las actividades clásicas productivas de la provincia de San Juan.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE8" name="accordion-1" type="checkbox"/>
+											<label for="estacionE8">Urquiza</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. San Juan 3100</p>
+												<p>Esta estación está ubicada en la Avenida San Juan y Gral. Urquiza, en el Barrio de San Cristobal.</p>
+												<p>Fue inaugurada el 20 de junio de 1944 y fue declarada monumento histórico nacional en 1997. Sus andenes están decorados en bocados de Leonie Matthise homenajeando a Justo José de Urquiza.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE9" name="accordion-1" type="checkbox"/>
+											<label for="estacionE9">Boedo</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. San Juan 3500</p>
+												<p>Esta estación, de andén central, está ubicada en las Avenidas San Juan y Boedo, en el Barrio de Boedo. Fue inaugurada el 9 de julio de 1960.</p>
+												<p>La estación está ornamentada con murales basados en bocetos de Alfredo Guido titulado Boedo a mediados del siglo XIX y otro, basado en los bofetos de Primaldo Mónaco, llamado Niños Jugando.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE10" name="accordion-1" type="checkbox"/>
+											<label for="estacionE10">Av. La Plata</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Directorio 1º</p>
+												<p>Esta estación, de andén central, está ubicada en las Avenidas Directorio y La Plata, en el límite de los barrios de Caballito y Boedo.</p>
+												<p>Fue inaugurada el 24 de abril de 1996.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE11" name="accordion-1" type="checkbox"/>
+											<label for="estacionE11">José M. Moreno</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Direcotrio 400</p>
+												<p>Esta estación, de andenes laterales, está ubicada en las Avenidas Directorio y José María Moreno, en el límite de los barrios de Caballito y Parque Chacabuco.</p>
+												<p>Fue inaugurada el 23 de julio de 1973. El vestíbulo está ornamentado con un mural basado en los bocetos de Carlos Benvenuto y realizado por cerámicas Santa María en homenaje al Dr. José María Moreno.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE12" name="accordion-1" type="checkbox"/>
+											<label for="estacionE12">Emilio Mitre</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Emilio Mitre 700</p>
+												<p>Esta estación, de andenes laterales, está ubicada en Avenida Eva Perón y Emilio Mitre, en el Barrio de Parque Chacabuco. Está ubicada a metros de la Facultad de Filosofía y Letras de la Universidad de Buenos Aires.</p>
+												<p>Fue inaugurada el 7 de octubre de 1985.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE13" name="accordion-1" type="checkbox"/>
+											<label for="estacionE13">Medalla Milagrosa</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Pumacahua 900</p>
+												<p>Está ubicada en Autopista 25 de Mayo y la Avenida Eva Perón, entre las calles Pumacahua y Dávila, en el Barrio de Parque Chacabuco. Su nombre surge del Colegio Parroquial y la Iglesia homónima que se encuentran muy próximas a la estación.</p>
+												<p>Fue inaugurada el 27 de noviembre de 1985. La estación cuenta con dos murales de Santiago García Sáenz llamados Rogad por Nosotros y Medalla Milagrosa.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE14" name="accordion-1" type="checkbox"/>
+											<label for="estacionE14">Varela</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+												</p>
+												<p></p>
+												<p>Av. Varela 900</p>
+												<p>Ubicada en Autopista 25 de Mayo y calle Varela, en el Barrio de Flores.</p>
+												<p>Fue inaugurada el 31 de octubre de 1985.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionE15" name="accordion-1" type="checkbox" class=""/>
+											<label class="bottom" for="estacionE15">Plaza de los Virreyes</label>
+											<div class="article ac-large bottom">
+												<p>Av. Lafuente 1000</p>
+												<p>Estación cabecera, de andén central, está ubicada en Autopista 25 de Mayo y Avenida Lafuente, en el Barrio de Flores.</p>
+												<p>Fue inaugurada el 8 de mayo de 1986.</p>
+											</div>
+										</div>
+																		
+									</div>
+						        </div>
+					
+						</div>
+					</div>
+					<div class="panelH" data-panel="panel-H">
+						<div>
+								
+								<h2 class="tituloDetalle">Línea H</h2>
+						        <div class="container">
+									<div class="accordion">
+										<div>
+											<input id="estacionH1" name="accordion-1" type="checkbox"/>
+											<label class="top" for="estacionH1">Corrientes</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Pueyrredón 500</p>
+												<p>La cabecera de la estación está ubicada en la intersección de las Avenidas Pueyrredón y Corrientes, en el Barrio de Balvanera.</p>
+												<p>Fue inaugurada el 6 de diciembre de 2011. La estación tiene en su entrepiso una obra con técnica de fileteado dedicada a Discépolo de J. Muscia y A. Martínez. Esto mismos autores realizaron la obra ubicada en el tímpano homenajeando al mismo artista tanguero.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionH2" name="accordion-1" type="checkbox"/>
+											<label for="estacionH2">Once</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Pueyrredón 100</p>
+												<p>La estación está ubicada en la intersección de las Avenidas Pueyrredeon y Rivadavia, en el Barrio de Balvanera.</p>
+												<p>Fue inaugurada el 18 de octubre de 2007. La estación tiene 9 obras de Hermenegildo Sabat dedicada a los artistas tangueros.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionH3" name="accordion-1" type="checkbox"/>
+											<label for="estacionH3">Venezuela</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Venezuela 2500</p>
+												<p>Ubicada en la intersección de la Avenida Jujuy y calle Venezuela, en el Barrio de Balvanera.</p>
+												<p>Fue inaugurada el 18 de octubre de 1997. Cuenta con 10 obras de Carlos Nine con temática tanguera debido a que la línea H fue declarada por la Legislatura porteña, paseo cultural del tango.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionH4" name="accordion-1" type="checkbox"/>
+											<label for="estacionH4">Humberto 1º</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Jujuy 1100</p>
+												<p>Ubicada en la intersección de la Avenida Jujuy y calle Humberto 1º, en el Barrio de San Cristobal.</p>
+												<p>Fue inaugurada el 18 de octubre de 2007. Está ornamentada con 6 obras de Oscar Grillo con temática tanguear debido a que la línea H fue declarada por la Legislatura porteña, paseo cultural del tango.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionH5" name="accordion-1" type="checkbox"/>
+											<label for="estacionH5">Inclán</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Jujuy 1700</p>
+												<p>Ubicada en la intersección de la Avenida Jujuy y calle Inclán, en el Barrio de Parque Patricios.</p>
+												<p>Fue inaugurada el 18 de octubre de 2007. Está ornamentada con 10 obras de Alfredo Sabat con temática tanguear debido a que la línea H fue declarada por la Legislatura porteña, paseo cultural del tango.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionH6" name="accordion-1" type="checkbox"/>
+											<label for="estacionH6">Caseros</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Av. Caseros 2600</p>
+												<p>Ubicada en la intersección de Avenida Jujuy y Avenida Caseros, en el Barrio de Parque Patricios.</p>
+												<p>Fue inaugurada el 18 de octubre de 2007. Esta ornamentada con 6 obras de Hermenegildo Sabat con temática tanguear debido a que la línea H fue declarada por la Legislatura porteña, paseo cultural del tango.</p>
+											</div>
+										</div>
+										
+										<div>
+											<input id="estacionH7" name="accordion-1" type="checkbox"/>
+											<label for="estacionH7">Patricios</label>
+											<div class="article ac-large">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+												</p>
+												<p></p>
+												<p>Monteagudo 100</p>
+												<p>Ubicada en la intersección de la Avenida Caseros y Monteagudo, en el Barrio Parque Patricios.</p>
+												<p>Fue inaugurada el 4 de octubre de 2011. Está ornamentada con obras de Ricardo Carpani y Marcello Mortaroti, homenajeando al artista tangueo Tito Lusiardo, debido a que la línea H fue declarada por la Legislatura porteña, paseo cultural del tango. Además cuenta con una pantalla interactiva donde se proyecta la historial del Barrio.</p>
+											</div>
+										</div>
+
+										<div>
+											<input id="estacionH8" name="accordion-1" type="checkbox"/>
+											<label class="bottom" for="estacionH8">Hospitales</label>
+											<div class="article ac-large bottom">
+												<p>
+													<img class="infolinea infolineaIcono" src="images/escalera.png"/>
+													<img class="infolinea infolineaIcono" src="images/ascensor.png"/>
+													<img class="infolinea infolineaIcono" src="images/wifi.png"/>
+													<img class="infolinea infolineaIcono" src="images/banios.png"/>
+													<img class="infolinea infolineaIcono" src="images/termconsulta.png"/>
+												</p>
+												<p></p>
+												<p>Av. Almafuerte 300</p>
+												<p>La estación está ubicada en la intersección de la Avenida Almafuerte y Los Patos, en el Barrio Parque Patricios.</p>
+												<p>Fue inaugurada el 27 de mayo de 2013. Está ornamentada con obras de Martín Ron y Leandro Frizzero homenajeando al artista tanguero Ángel Villoldo, debido a que la línea H fue declarada por la Legislatura porteña, paseo cultural del tango.</p>
+											</div>
+										</div>
+																		
+									</div>
+						        </div>
+					
+						</div>
+					</div>
+					<div class="panelP" data-panel="panel-P">
+						<div>
+						
+						
+						
+								<h2 class="tituloDetalle">Premetro</h2>
+								<div class="container">
+									<div class="accordion">
+										<div>
+											<input id="estacionP1" name="accordion-1" type="checkbox" class="escmecanican ascensorn wifin banios termconsulta"/>
+											<label class="top" for="estacionP1">Int. Saguier</label>
+											<div class="article ac-large">
+												<p>Av. Lafuente 1000</p>
+												<p>Estación cabecera de la Línea de Premetro está ubicada en Avenida Perón y Avenida Lafuente en el Barrio de Flores.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986. Permite realizar conexión con la estación Plaza de los Virreeyes, de la Línea E de subtes.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP2" name="accordion-1" type="checkbox"/>
+											<label for="estacionP2">Balbastro</label>
+											<div class="article ac-large">
+												<p>Lafuente 1600</p>
+												<p>Ubicada en la Avenida Lafuente y Balbastro, en el Barrio de Flores, próxima al cementerio.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP3" name="accordion-1" type="checkbox"/>
+											<label for="estacionP3">Mariano Acosta</label>
+											<div class="article ac-large">
+												<p>Mariano Acosta 2400</p>
+												<p>La estación está ubicada en la calle Mariano Acosta y Avenida Castañares, en el Barrio de Villa Soldati, próxima al Estadio Club Deportivo Español y a los talleres del premetro donde se refaccionan los trenes.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP4" name="accordion-1" type="checkbox"/>
+											<label for="estacionP4">Mariano Acosta</label>
+											<div class="article ac-large">
+												<p>Mariano Acosta 2400</p>
+												<p>La estación está ubicada en la calle Mariano Acosta y Avenida Castañares, en el Barrio de Villa Soldati, próxima al Estadio Club Deportivo Español y a los talleres del premetro donde se refaccionan los trenes.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP5" name="accordion-1" type="checkbox"/>
+											<label for="estacionP5">Somellera</label>
+											<div class="article ac-large">
+												<p>Mariano Acosta 2500</p>
+												<p>La estación está ubicada en la intersección de la Avenida Mariano Acosta y calle Somellera, en el Barrio de Villa Soldati.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP6" name="accordion-1" type="checkbox"/>
+											<label for="estacionP6">Ana María Janer</label>
+											<div class="article ac-large">
+												<p>Mariano Acosta 2700</p>
+												<p>La estación está ubicada en la Avenida Mariano Acosta y calle Ana María Janer, en el Barrio de Villa Soldati, próxima al Club Sacachispas.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP7" name="accordion-1" type="checkbox"/>
+											<label for="estacionP7">Ntra. Sra de Fátima</label>
+											<div class="article ac-large">
+												<p>Acosta 2900</p>
+												<p>La estación está ubicada en la Avenida Mariano Acosta y calle Barrios Pazos, en el Barrio de Villa Soldati, próxima a la Plaza Nuestra Señora de Fátima y a la parroquia del mismo nombre.</p>
+												<p>Fue inaugurada el 13 de marzo de 2000.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP8" name="accordion-1" type="checkbox"/>
+											<label for="estacionP8">Fernández de la Cruz</label>
+											<div class="article ac-large">
+												<p>Mariano Acosta 3100</p>
+												<p>Ubicada en la Avenida Mariano Acosta y Avenida Gral. Francisco Fernández de la Cruz, en el Barrio de Soldati.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP9" name="accordion-1" type="checkbox"/>
+											<label for="estacionP9">Pte Illia</label>
+											<div class="article ac-large">
+												<p>Laguna 3201</p>
+												<p>La estación está ubicada en la Avenida Gral. Francisco Fernández de la Cruz y Avenida Lacarra, en el Barrio de Villa Soldati. Permite hacer transbordo con la estación homónima del ferrocarril Belgrano Sur.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP10" name="accordion-1" type="checkbox"/>
+											<label for="estacionP10">Parque de la Ciudad</label>
+											<div class="article ac-large">
+												<p>Av. Gral Fernandez De La Cruz 4500</p>
+												<p>Ubicada en la Avenida Gral. Francisco Fernández de la Cruz al 4000, en el Barrio de Villa Soldati, próxima al Parque de la Ciudad, al Parque Indoamericano y la Torre Espacial.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP11" name="accordion-1" type="checkbox"/>
+											<label for="estacionP11">Escalada</label>
+											<div class="article ac-large">
+												<p>Av. Escalada 4300</p>
+												<p>La estación está ubicada en la Avenida Gral. Francisco Fernández de la Cruz y Escalada, en el Barrio de Villa Lugano, próxima al Parque de la Ciudad, al Parque Indoamericano y la Torre Espacial.</p>
+												<p>Fue inaugurada el 27 de agosto de 1986.</p>
+											</div>
+										</div>
+										<div>
+											<input id="estacionP12" name="accordion-1" type="checkbox"/>
+											<label for="estacionP12">Pola</label>
+											<div class="article ac-large">
+												<p>Pola 4400</p>
+												<p>Ubicada en la Av. Gral. Francisco Fernández de la Cruz y calle Pola, en el Barrio de Villa Lugano, próximo al Parque Roca y al Parque Indoamericano.</p>
+												<p>Fue inaugurada el 7 de noviembre de 2006.</p>
+											</div>
+										</div>
+												<h3 class="tituloDetalle">Ramal Centro Cívico</h2>      
+										        <div class="containerp2">
+													<div class="accordionp">
+														<div>
+															<input id="estacionP13" name="accordion-1" type="checkbox"/>
+															<label for="estacionP13">Ana Díaz</label>
+															<div class="article ac-large">
+																<p>Av. Gral. Fernandez De La Cruz 5600</p>
+																<p>La estación está ubicada en Avenida Gral. Francisco Fernández de la Cruz y Av. Larrazábal, en el Barrio de Villa Lugano.</p>
+																<p>Fue inaugurada el 27 de agosto de 1986.</p>
+															</div>
+														</div>
+														
+														<div>
+															<input id="estacionP14" name="accordion-1" type="checkbox"/>
+															<label class="bottom" for="estacionP14">Centro Cívico Lugano</label>
+															<div class="article ac-large">
+																<p>Av. Soldado De La Frontera 4900</p>
+																<p>La estacieon cabecera está ubicada sobre Av. Soldado de la Frontera y Conrrado General Villegas, en el Barrio de Villa Lugano, dentro del Barrio Gral. de División Manuel Nicolás Savio.</p>
+																<p>Fue inaugurada el 27 de agosto de 1986.</p>
+															</div>
+														</div>
+														
+													</div>
+										        </div>
+										        <h3 class="tituloDetalle">Ramal Gral. Savio</h2>      
+										        <div class="containerp3">
+													<div class="accordionp">
+														<div>
+															<input id="estacionP15" name="accordion-1" type="checkbox"/>
+															<label for="estacionP15">Larrazábal</label>
+															<div class="article ac-large">
+																<p>Larrazábal 4600</p>
+																<p>Ubicada en la Avenida Larrazábal y Avenida Ana Díaz, en el Barrio de Villa Lugano.</p>
+																<p>Fue inaugurada el 27 de agosto de 1986.</p>
+															</div>
+														</div>
+														<div>
+															<input id="estacionP16" name="accordion-1" type="checkbox"/>
+															<label for="estacionP16">Nicolás Descalzi</label>
+															<div class="article ac-large">
+																<p>Av. Larrazábal 4800</p>
+																<p>La estación está ubicada en la Avenida Larrazábal y Nicolás Descalzi, en el Barrio de Villa Lugano.</p>
+																<p>Fue inaugurada el 27 de agosto de 1986.</p>
+															</div>
+														</div>
+														<div>
+															<input id="estacionP17" name="accordion-1" type="checkbox"/>
+															<label for="estacionP17">Gaino Ezeiza</label>
+															<div class="article ac-large">
+																<p>Av. Larrazábal 5200</p>
+																<p>Ubicada en la Avenida Larrazábal y Coronel Roca, entre el Barrio de Villa Lugano y Villa Riachuelo, próxima al autódromo Juan y Oscar Alfredo Gálvez.</p>
+																<p>Fue inaugurada el 27 de agosto de 1986.</p>
+															</div>
+														</div>
+														<div>
+															<input id="estacionP18" name="accordion-1" type="checkbox"/>
+															<label class="bottom" for="estacionP18">General Savio</label>
+															<div class="article ac-large">
+																<p>Av. Cnel. Roca 5700</p>
+																<p>La estación está ubicada en la Av. Coronel Roca y Av. Soldado de la Frontera, frente al Barrio General Savio.</p>
+																<p>Fue inaugurada el 27 de agosto de 1986.</p>
+															</div>
+														</div>
+													</div>
+										        </div>
+									</div>
+								</div>						
+						
+						
+						
+						</div>
+					</div>
+					<nav>
+						<span class="bl-icon bl-icon-close derecha"></span>
+					</nav>
+				</div>
+			</div>
+		</div><!-- /container -->
+		<script src="javascripts/cambiahoras.js"></script>
+		<script src="javascripts/jquery.min.js"></script>
+		<script src="javascripts/boxlayout.js"></script>
+		<script src="javascripts/fullscreen.js"></script>
+		<!-- soporte para gestos
+		<script src="js/hammer.js"></script>
+		<script src="js/implhammer.js"></script> -->
+		<script>
+			$(function() {
+				Boxlayout.init();
+			});
+		</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-48044828-1', 'alsubte.com.ar');
+		  ga('send', 'pageview');
+
+		</script>
+
+	</body>
+</html>
